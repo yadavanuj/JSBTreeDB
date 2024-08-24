@@ -1,6 +1,7 @@
 package com.yadavanuj.github.ds.list;
 
 import lombok.Builder;
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -12,6 +13,7 @@ import java.util.Objects;
  * insertAt
  */
 
+@Data
 public class SinglyList {
 
     /**
@@ -21,6 +23,7 @@ public class SinglyList {
     @Getter
     @Setter
     @Builder
+    @Data
     public static class Node {
         private int data;
         private Node next;

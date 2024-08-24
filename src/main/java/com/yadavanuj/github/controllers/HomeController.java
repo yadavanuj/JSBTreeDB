@@ -44,13 +44,13 @@ public class HomeController {
     }
 
     @GetMapping("/list/append/{name}/{value}")
-    public String append(@PathVariable String name,@PathVariable int value) {
+    public SinglyList append(@PathVariable String name,@PathVariable int value) {
         // Not handling negative cases for presentation
         SinglyList list = (SinglyList) this.store.get(name);
         list.append(value);
 
         this.store.put(name, list);
         SinglyList t = (SinglyList) this.store.get(name);
-        return t.toString();
+        return t;
     }
 }
